@@ -5,13 +5,13 @@ import Header from "@/components/Header/Header";
 const Home = () => (
   <div className={styles.container}>
     <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
+      <title>Tuitah</title>
+      <link rel="icon" href="/bird.png" />
     </Head>
     <Header />
 
     <main>
-      <h1 className={styles.title}>Bienvenus au Twitter</h1>
+      <h1 className={styles.title}>Bienvenus au Tuitah</h1>
     </main>
   </div>
 );
