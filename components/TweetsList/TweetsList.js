@@ -1,9 +1,9 @@
 const TweetsList = () => {
   return (
     <ul>
-      {tuits.map((tuit) => (
+      {/* {tuits.map((tuit) => (
         <li key={tuit.id}></li>
-      ))}
+      ))} */}
     </ul>
   );
 };
