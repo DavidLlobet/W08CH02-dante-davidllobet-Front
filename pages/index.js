@@ -10,7 +10,9 @@ const Home = () => (
     </Head>
     <Header />
 
-    <main></main>
+    <main>
+      <h1 className={styles.title}>Bienvenus au Twitter</h1>
+    </main>
   </div>
 );
 

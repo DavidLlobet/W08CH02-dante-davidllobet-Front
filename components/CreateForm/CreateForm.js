@@ -3,24 +3,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const CreateForm = () => {
   const initialValue = {
-    title: "",
-    body: "",
+    text: "",
   };
   const [data, setData] = useState(initialValue);
   const [buttonDisabled, setButtonDisabled] = useState(true);
 
   useEffect(() => {
-    if (data.title && data.body) {
+    if (data.text !== "") {
       setButtonDisabled(false);
     }
   }, [data]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (data.title !== "" && data.body !== "") {
+    if (data.text !== "") {
+      console.log("dentro del submit");
       const response = await fetch(
-        `https://w08chw02-dante-davidllobet.herokuapp.com/tuits`,
+        `https://w08chw02-dante-davidllobet.herokuapp.com/tuits/create`,
         {
           method: "POST",
           headers: {
@@ -44,9 +43,21 @@ const CreateForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
+    <form
+      className="form_create container-sm"
+      onSubmit={handleSubmit}
+      autoComplete="off"
+    >
       <label htmlFor="body">Escribe tu tuit aquí: </label>
-      <input type="text" id="body" value={data.body} onChange={handleChange} />
+      <textarea
+        className="form-control"
+        type="textarea"
+        id="text"
+        rows="4"
+        cols="50"
+        value={data.text}
+        onChange={handleChange}
+      />
       <button type="submit" disabled={buttonDisabled}>
         PUBLICAR
       </button>

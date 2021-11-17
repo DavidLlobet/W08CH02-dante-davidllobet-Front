@@ -1,5 +1,4 @@
 const Tweet = ({ tuit }) => {
-  console.log(tuit);
   return (
     <article className="card shadow-sm">
       <p className="fw-light text-center display-5">{tuit.text}</p>
