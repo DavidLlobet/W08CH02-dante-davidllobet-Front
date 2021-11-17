@@ -6,10 +6,10 @@ const Header = () => {
       <Link className="nav-link" href="/">
         HOME/
       </Link>
-      {/* <Link className="nav-link" href="/Tuits">
+      <Link className="nav-link" href="/Tuits">
         TUITS/
       </Link>
-      <Link className="nav-link" href="/Crear Tuit">
+      {/* <Link className="nav-link" href="/Crear Tuit">
         CREAR TUIT/
       </Link> */}
     </header>
