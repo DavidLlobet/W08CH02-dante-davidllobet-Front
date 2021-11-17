@@ -1,17 +1,21 @@
-function Tuits() {
+import Header from "@/components/Header/Header";
+import TweetsList from "@/components/TweetsList/TweetsList";
+
+function Tuits(params) {
   return (
     <>
       <Header />
-      <TuitsList />
+      <TweetsList tuits={params.tuits} />
     </>
   );
 }
 
 export async function getServerSideProps() {
-  const res = await fetch("url");
+  const res = await fetch(
+    "https://w08chw02-dante-davidllobet.herokuapp.com/tuits"
+  );
   const tuits = await res.json();
 
-  // Pass data to the page via props
   return { props: { tuits } };
 }
 
