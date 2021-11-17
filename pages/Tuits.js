@@ -1,11 +1,14 @@
 import Header from "@/components/Header/Header";
 import TweetsList from "@/components/TweetsList/TweetsList";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function Tuits(params) {
+function Tuits({ tuits }) {
   return (
     <>
       <Header />
-      <TweetsList tuits={params.tuits} />
+      <div class="container">
+        <TweetsList tuits={tuits} />
+      </div>
     </>
   );
 }

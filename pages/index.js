@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "./index.module.css";
 import Link from "next/link";
+import Header from "@/components/Header/Header";
 
 const Home = () => (
   <div className={styles.container}>
@@ -8,15 +9,8 @@ const Home = () => (
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <Link className="nav-link" href="/">
-      HOME/
-    </Link>
-    <Link className="nav-link" href="/Tuits">
-      TUITS/
-    </Link>
-    {/* <Link className="nav-link" href="/CreatePost">
-      CREAR TUIT/
-    </Link> */}
+    <Header />
+
     <main></main>
   </div>
 );
