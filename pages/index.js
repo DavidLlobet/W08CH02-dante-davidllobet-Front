@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "./index.module.css";
-import Link from "next/link";
 import Header from "@/components/Header/Header";
 
 const Home = () => (
@@ -11,7 +10,9 @@ const Home = () => (
     </Head>
     <Header />
 
-    <main></main>
+    <main>
+      <h1 className={styles.title}>Bienvenus au Twitter</h1>
+    </main>
   </div>
 );
 

@@ -6,7 +6,7 @@ function Tuits({ tuits }) {
   return (
     <>
       <Header />
-      <div class="container">
+      <div className="container">
         <TweetsList tuits={tuits} />
       </div>
     </>
