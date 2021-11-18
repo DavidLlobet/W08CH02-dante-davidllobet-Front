@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Tuits from "../pages/Tuits";
+import Tuits from "../pages/index";
 
 describe("Given a Tuits page component", () => {
   describe("When it's rendered with two tuits", () => {
@@ -11,9 +11,9 @@ describe("Given a Tuits page component", () => {
           date: 2021 - 11 - 17,
         },
         {
-          name: "Que pasa neeeeeeen",
-          url: 14,
-          id: 2,
+          text: "Que pasa neeeeeeen",
+          likes: 14,
+          date: 2021 - 11 - 18,
         },
       ];
       render(<Tuits tuits={tuits} />);

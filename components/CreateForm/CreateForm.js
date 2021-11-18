@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const CreateForm = () => {
   const initialValue = {
@@ -16,9 +17,8 @@ const CreateForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (data.text !== "") {
-      console.log("dentro del submit");
       const response = await fetch(
-        `https://w08chw02-dante-davidllobet.herokuapp.com/tuits/create`,
+        `https://w08chw02-dante-davidllobet.herokuapp.com/tuits`,
         {
           method: "POST",
           headers: {
