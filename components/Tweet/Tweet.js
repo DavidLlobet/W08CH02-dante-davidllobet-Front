@@ -10,6 +10,15 @@ const Tweet = ({ tuit }) => {
     );
   };
 
+  const onDelete = async (id) => {
+    const response = await fetch(
+      `https://w08chw02-dante-davidllobet.herokuapp.com/tuits/delete/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
+  };
+
   return (
     <article className="card shadow-sm">
       <p className="fw-light text-center display-5">{tuit.text}</p>
@@ -17,6 +26,9 @@ const Tweet = ({ tuit }) => {
       <p>Date: {tuit.date}</p>
       <button className="btn btn-info" onClick={() => onLike(tuit.id)}>
         LIKE
+      </button>
+      <button className="btn btn-danger" onClick={() => onDelete(tuit.id)}>
+        DELETE
       </button>
     </article>
   );
