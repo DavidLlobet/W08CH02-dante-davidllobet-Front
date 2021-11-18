@@ -1,7 +1,9 @@
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const CreateForm = () => {
+  const route = useRouter();
   const initialValue = {
     text: "",
   };
@@ -30,6 +32,7 @@ const CreateForm = () => {
 
       if (response.status === 201) {
         setData(initialValue);
+        route.push("/");
       }
     }
   };
