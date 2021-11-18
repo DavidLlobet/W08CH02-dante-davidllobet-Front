@@ -1,19 +1,24 @@
-import Head from "next/head";
-import styles from "./index.module.css";
 import Header from "@/components/Header/Header";
+import TweetsList from "@/components/TweetsList/TweetsList";
 
-const Home = () => (
-  <div className={styles.container}>
-    <Head>
-      <title>Tuitah</title>
-      <link rel="icon" href="/bird.png" />
-    </Head>
-    <Header />
+function Tuits({ tuits }) {
+  return (
+    <>
+      <Header />
+      <div className="container">
+        <TweetsList tuits={tuits} />
+      </div>
+    </>
+  );
+}
 
-    <main>
-      <h1 className={styles.title}>Bienvenus au Tuitah</h1>
-    </main>
-  </div>
-);
+export async function getServerSideProps() {
+  const res = await fetch(
+    "https://w08chw02-dante-davidllobet.herokuapp.com/tuits"
+  );
+  const tuits = await res.json();
 
-export default Home;
+  return { props: { tuits } };
+}
+
+export default Tuits;

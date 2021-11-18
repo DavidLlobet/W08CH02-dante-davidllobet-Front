@@ -1,16 +1,12 @@
 import Link from "next/link";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const Header = () => {
   return (
     <header className="d-flex justify-content-center py-3">
       <Link className="nav-link" href="/">
-        HOME/
+        TUITAH/
       </Link>
-      <Link className="nav-link" href="/Tuits">
-        TUITS/
-      </Link>
-      <Link className="nav-link" href="/CreateTuit">
+      <Link className="nav-link" href="/createTuit">
         CREAR TUIT
       </Link>
     </header>
