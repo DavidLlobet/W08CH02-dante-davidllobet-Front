@@ -6,7 +6,6 @@ function CreateTuit() {
     <>
       <Header />
       <div className="container">
-        <h1>Añadir un tuit</h1>
         <CreateForm />
       </div>
     </>
