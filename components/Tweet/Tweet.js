@@ -20,7 +20,7 @@ const Tweet = ({ tuit }) => {
   };
 
   return (
-    <article className="card shadow-sm">
+    <article className="card shadow-sm tweet">
       <p className="fw-light text-center display-5">{tuit.text}</p>
       <p>Likes: {tuit.likes}</p>
       <p>Date: {tuit.date}</p>

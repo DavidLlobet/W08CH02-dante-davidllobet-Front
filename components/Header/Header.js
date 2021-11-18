@@ -1,13 +1,14 @@
 import Link from "next/link";
+import styles from "./Styles.module.css";
 
 const Header = () => {
   return (
-    <header className="d-flex justify-content-center py-3">
-      <Link className="nav-link" href="/">
-        TUITAH/
+    <header className={styles.header}>
+      <Link href="/">
+        <a className={styles.link}>Tuitah</a>
       </Link>
-      <Link className="nav-link" href="/createTuit">
-        CREAR TUIT
+      <Link href="/createTuit">
+        <a className={styles.link}>Crear Tuit</a>
       </Link>
     </header>
   );
