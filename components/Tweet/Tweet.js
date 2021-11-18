@@ -9,3 +9,11 @@ const Tweet = ({ tuit }) => {
 };
 
 export default Tweet;
+
+Tweet.propTypes = {
+  tuit: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    date: PropTypes.date.isRequired,
+  }).isRequired,
+};
