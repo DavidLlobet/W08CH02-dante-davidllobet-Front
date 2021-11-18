@@ -18,7 +18,7 @@ const CreateForm = () => {
     e.preventDefault();
     if (data.text !== "") {
       const response = await fetch(
-        `https://w08chw02-dante-davidllobet.herokuapp.com/tuits`,
+        `https://w08chw02-dante-davidllobet.herokuapp.com/tuits/create`,
         {
           method: "POST",
           headers: {
