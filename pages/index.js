@@ -1,5 +1,6 @@
 import Header from "@/components/Header/Header";
 import TweetsList from "@/components/TweetsList/TweetsList";
+import PropTypes from "prop-types";
 
 function Tuits({ tuits }) {
   return (
@@ -22,3 +23,10 @@ export async function getServerSideProps() {
 }
 
 export default Tuits;
+
+Tuits.propTypes = {
+  tuit: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
+};
