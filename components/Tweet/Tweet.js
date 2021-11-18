@@ -1,4 +1,9 @@
+import TimeAgo from "javascript-time-ago";
+import es from "javascript-time-ago/locale/es.json";
+import ReactTimeAgo from "react-time-ago";
 import PropTypes from "prop-types";
+
+TimeAgo.addLocale(es);
 
 const Tweet = ({ tuit }) => {
   const onLike = async (id) => {
@@ -23,7 +28,7 @@ const Tweet = ({ tuit }) => {
     <article className="card shadow-sm tweet">
       <p className="fw-light text-center display-5">{tuit.text}</p>
       <p>Likes: {tuit.likes}</p>
-      <p>Date: {tuit.date}</p>
+      <ReactTimeAgo date={Date.parse(tuit.date)} locale="es" />
       <button className="btn btn-info" onClick={() => onLike(tuit.id)}>
         LIKE
       </button>
