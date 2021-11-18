@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Tweet = ({ tuit }) => {
   return (
     <article className="card shadow-sm">
@@ -14,6 +16,5 @@ Tweet.propTypes = {
   tuit: PropTypes.shape({
     text: PropTypes.string.isRequired,
     likes: PropTypes.number.isRequired,
-    date: PropTypes.date.isRequired,
-  }).isRequired,
+  }),
 };

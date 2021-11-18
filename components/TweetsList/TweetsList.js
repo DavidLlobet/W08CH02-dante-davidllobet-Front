@@ -1,4 +1,5 @@
 import Tweet from "../Tweet/Tweet";
+import PropTypes from "prop-types";
 
 const TweetsList = ({ tuits }) => {
   return (
@@ -11,3 +12,12 @@ const TweetsList = ({ tuits }) => {
 };
 
 export default TweetsList;
+
+TweetsList.propTypes = {
+  tuits: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      likes: PropTypes.number.isRequired,
+    })
+  ),
+};
